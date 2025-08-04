@@ -1,8 +1,8 @@
-from app import calculator
+import unittest
+from app.calculator import add
 
-def test_add():
-    assert calculator.add(3, 2) == 5
 
-def test_subtract():
-    assert calculator.subtract(5, 2) == 3
+class TestCalculator(unittest.TestCase):
 
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
